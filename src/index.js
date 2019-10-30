@@ -2,20 +2,18 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
+function getTime() {
+    return new Date().toLocaleTimeString();
+}
+
 // create a react component
 const App = () => {
     return (
-        <div>
-            {/* giving class name and reference with jsx */}
-            <label className="label" htmlFor="name">
-                Enter your name:
-            </label>
-            <input id="name" type="text" />
-            {/* inline styling with jsx */}
-            <button style={{ backgroundColor: "blue", color: "white" }}>
-                Submit
-            </button>
-        </div>
+        <center>
+            <div style={{ marginTop: "250px" }}>Current Time</div>
+            {/* referencing js variable or js function in JSX */}
+            <h3>{getTime()}</h3>
+        </center>
     );
 };
 
